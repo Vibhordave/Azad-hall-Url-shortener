@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #0B101B;
+}
+.container{   
+  margin-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font: inter;
+  font-style: bold;
+  font-weight: 600;
+  font-size: 60px;
+  margin: 0;
+  background: -webkit-linear-gradient(left, #144EE3, #EB568E, #A353AA, #144EE3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h2{
+  font: inter;
+  font-style: bold;
+  font-size: 30px;
+  margin-top: 20px;
+
+  background: -webkit-linear-gradient(left, #144EE3, #EB568E, #A353AA, #144EE3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+button {
+  background-color: #144EE3;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 48px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.item-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: calc(100vh - 200px);
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.premium-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 14rem;
+  width: 40rem;
+  text-align: center;
+  border: 3px solid #353C4A;
+  border-radius: 32px;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Adjust as needed */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.create-free,
+.view {
+  width:230px;
+  margin : 20px;
+  /* Add your button styles here */
+}
+p {
+  font-size: 14px;
+  margin: 0 0 40px;
+}
+.auto-paste{
+  margin : 20px;
+}
+
+.wrapper {
+position: relative;
+display: inline-block;
+width: 100%;
+max-width: 500px;
+margin: 20px;
+}
+
+input[type="text"] {
+background-color: #181E29;
+width: 100%;
+height: 3.5rem;
+padding: 10px;
+padding-right: 60px; /* Make room for the button */
+font-size: 18px;
+border: 4px solid #2C427B;
+border-radius: 48px;
+}
+
+button[type="submit"] {
+position: absolute;
+right: 7px; /* Adjust as needed */
+top: 50%;
+transform: translateY(-50%);
+background-color: #144EE3;
+color: #fff;
+font-size: 16px;
+border: none;
+border-radius: 48px;
+cursor: pointer;
+}
+.bottom{
+  text-align: center;
+  margin-top: 120px;
 }
