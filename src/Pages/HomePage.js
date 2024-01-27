@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   const [url, setUrl] = useState('');
@@ -24,7 +25,7 @@ const HomePage = () => {
         <button type='submit' onClick={shortenUrl}>Shorten It Now!</button>
         </div>
         <p class="auto-paste">Auto Paste from Clipboard</p>
-            <p>You can create 05 more links,. Register now to enjoy Unlimited Usage</p>
+            <p>You can create 05 more links. Register now to enjoy Unlimited Usage</p>
          
         {/* Add more features like copy to clipboard etc. */}
       </div>
@@ -37,8 +38,7 @@ const HomePage = () => {
           </div>
         </div>
         
-        <p className="bottom">Register Now to enjoy Unlimited History</p>
-      
+        <p className="bottom"><Link to="/register"className="register-link">Register Now</Link> to enjoy Unlimited History</p>      
       
     </div>
   );
