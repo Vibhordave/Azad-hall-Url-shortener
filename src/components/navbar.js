@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Navbar() {
-  return (
+  return ( 
         <div className="frame">
             <div className="text-wrapper">Linkly</div>
             <div className="div">
@@ -9,7 +9,7 @@ function Navbar() {
                     <div className="text-wrapper-2">Login</div>
                     <div className="text-wrapper-3 gg-log-in"></div>
                 </div>
-                <div className="btn-primary"><div className="text-wrapper-2">Register Now</div></div>
+                <div ><button>Register Now</button></div>
             </div>
             <div className="text-wrapper-4">®</div>
         </div>

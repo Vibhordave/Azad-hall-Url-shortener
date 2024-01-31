@@ -9,13 +9,13 @@ function App() {
     <>
       <div className="nav-added">
         <Navbar />
+    </div>
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/subscription" element={<Subscription />} />
       </Routes>
     </Router>
-    </div>
     </>
   );
 }
