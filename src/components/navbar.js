@@ -1,19 +1,17 @@
-import React from 'react'
-
+import React from "react";
+import { LuLogIn } from "react-icons/lu";
 function Navbar() {
-  return ( 
-        <div className="frame">
-            <div className="text-wrapper">Linkly</div>
-            <div className="div">
-                <div className="a-btn-primary">
-                    <div className="text-wrapper-2">Login</div>
-                    <div className="text-wrapper-3 gg-log-in"></div>
-                </div>
-                <div ><button>Register Now</button></div>
-            </div>
-            <div className="text-wrapper-4">®</div>
-        </div>
-  )
+  return (
+    <div className="navbar">
+      <div className="text-wrapper">Linkly</div>
+      <div className="navbar-buttons">
+        <button className="navbar-button" id="login">
+          Login <LuLogIn />
+        </button>
+        <button className="navbar-button">Register Now</button>
+      </div>
+    </div>
+  );
 }
 
-export default Navbar
+export default Navbar;
