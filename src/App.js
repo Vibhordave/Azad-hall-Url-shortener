@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import Subscription from "./Pages/Subscription";
 import Navbar from "./components/navbar";
+import LoginPage from "./Pages/login";
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/subscription" element={<Subscription />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </Router>
     </>

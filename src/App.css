@@ -120,7 +120,7 @@ border: 4px solid #2C427B;
 border-radius: 48px;
 }
 
-button[type="submit"] {
+.abs-submit {
 position: absolute;
 right: 7px; /* Adjust as needed */
 top: 50%;
@@ -298,4 +298,73 @@ box-shadow:1px 4px 10px 2px rgba(70, 113, 179, 0.2);
   }
   
 }
+.login-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 24rem;
+  width: 40rem;
+  text-align: center;
+  border: 3px solid #353C4A;
+  border-radius: 32px;
+}
 
+.submit{
+  right: 7px; /* Adjust as needed */
+top: 50%;
+margin    : 10px;
+transform: translateY(50%);
+background-color: #144EE3;
+color: #fff;
+font-size: 16px;
+border: none;
+border-radius: 48px;
+cursor: pointer;
+box-shadow:1px 4px 10px 2px rgba(70, 113, 179, 0.2);
+
+}
+.email{
+  width: 60%;
+  height: 3rem;
+  margin-left: 3rem;
+  padding: 3px;
+ 
+  font-size: 15px;
+  border: 4px solid #2C427B;
+  border-radius: 15px;
+}
+.password{
+  margin-left: 5rem;
+  width: 60%;
+  height: 3rem;
+  padding: 3px;
+  
+  font-size: 18px;
+  border: 4px solid #2C427B;
+  border-radius: 15px;
+}
+br{
+  color: #fff;
+  background-color: #fff;
+}
+.google-login{
+  margin-top: 40px;
+  width: 60%;
+  height: 3rem;
+  padding: 3px;
+  background-color: #144EE3;
+  color: #fff;
+  font-size: 18px;
+  border: 4px solid #2C427B;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow:1px 4px 10px 2px rgba(70, 113, 179, 0.2);
+}
+.or{
+  margin-top: 23px;
+  color: #fff;
+  background-color: #0B101B;
+  margin-bottom: -22px;
+}

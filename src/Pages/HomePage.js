@@ -41,7 +41,7 @@ const HomePage = () => {
             placeholder="Your URL here"
           />
 
-          <button type="submit" onClick={shortenUrl}>
+          <button type="submit" className="abs-submit" onClick={shortenUrl}>
             Shorten Now!
           </button>
         </div>
