@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTable } from "react-table";
 import { IoCopy } from "react-icons/io5";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
@@ -16,6 +16,10 @@ function Dashboard() {
         Header: "Short Link",
         accessor: "shortLink",
       },
+      {
+        Header: "Long Link",
+        accessor: "longLink"
+      },
       ...(!isMobile
         ? [
             {
@@ -27,12 +31,8 @@ function Dashboard() {
               accessor: "clicks",
             },
             {
-              Header: "Status",
-              accessor: "status",
-            },
-            {
-              Header: "Date",
-              accessor: "date",
+              Header: "",
+              accessor: "del",
             },
           ]
         : []),
@@ -84,37 +84,6 @@ function Dashboard() {
     ],
     []
   );
-
-  const columns = React.useMemo(
-    () => [
-      {
-        Header: "Short Link",
-        accessor: "shortLink", // accessor is the "key" in the data
-      },
-      {
-        Header: "Original Link",
-        accessor: "originalLink",
-      },
-      {
-        Header: "QR Code",
-        accessor: "qrCode",
-      },
-      {
-        Header: "Clicks",
-        accessor: "clicks",
-      },
-      {
-        Header: "Status",
-        accessor: "status",
-      },
-      {
-        Header: "Date",
-        accessor: "date",
-      },
-    ],
-    []
-  );
-
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     useTable({ columns: dashboardColumns, data });
 

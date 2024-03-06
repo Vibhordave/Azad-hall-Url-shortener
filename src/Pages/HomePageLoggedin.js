@@ -2,9 +2,8 @@ import React, { useState,useEffect,useMemo } from "react";
 import { Link } from "react-router-dom";
 import Dashboard from "../components/DashBoard";
 import api from '../api/axiosConfig';
-
-const HomePage = () => {
-  const [url, setUrl] = useState("");
+const HomePageLoggedin = () => {
+    const [url, setUrl] = useState("");
   // const getAllUrls=async()=>{
   //   return [];
   // };
@@ -41,7 +40,7 @@ const HomePage = () => {
     setListUrls((t)=>[...t,val]);
   }
   const shortenUrl = async () => {
-    if (linkCount >= 15) {
+    if (linkCount >= 100) {
       alert(
         "You have reached the maximum number of links. Please register to create more links."
       );
@@ -96,11 +95,11 @@ const HomePage = () => {
           <span
             style={{ color: "skyblue", fontSize: "1.1rem", fontWeight: "30" }}
           >
-            {15 - linkCount}
+            {100 - linkCount}
           </span>{" "}
           more links.{" "}
           <Link to="/subscription" className="register-link">
-            Register Now
+            Take Premium Now
           </Link>{" "}
           to enjoy Unlimited Usage
         </p>
@@ -111,20 +110,12 @@ const HomePage = () => {
         <h2>Want More?</h2>
         <h1>Go Premium!</h1>
         <div className="button-container">
-          <button className="create-free">Create Free Account</button>
-          <button className="view">View</button>
+          <button className="create-free">Go Premium</button>
         </div>
       </div>
       <Dashboard />
-
-      <p className="home-bottom">
-        <Link to="/subscription" className="register-link">
-          Register Now
-        </Link>{" "}
-        to enjoy Unlimited History
-      </p>
     </div>
   );
-};
-
-export default HomePage;
+}
+ 
+export default HomePageLoggedin;

@@ -1,18 +1,24 @@
 import React, { useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
-import { GoogleLogin } from "react-google-login";
+import api from '../api/axiosConfig';
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = (e) => {
+  const handleLogin = async(e) => {
     e.preventDefault();
     // Add your authentication logic here (e.g., API calls, validation, etc.)
     console.log("Login clicked with email:", email, "and password:", password);
-  };
-  const responseGoogle = (response) => {
-    console.log(response);
-    // Here you can handle the response from Google login
+    try{
+      let resp=await api.post("/login",{email:email,password:password});
+      console.log(resp);
+      if(resp.status === 200){
+        alert("You have been Logged in!!");
+        window.location.href="/loggedin";
+      }
+    }catch(err){
+      console.log(err);
+    }
   };
 
   return (
@@ -44,15 +50,6 @@ const LoginPage = () => {
           Login
         </Button>
       </Form>
-      <p className="or"> OR</p>
-      <GoogleLogin
-        className="google-login"
-        clientId="YOUR_CLIENT_ID"
-        buttonText="Login with Google"
-        onSuccess={responseGoogle}
-        onFailure={responseGoogle}
-        cookiePolicy={"single_host_origin"}
-      />
     </Container>
   );
 };
