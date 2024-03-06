@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <div>
-        {window.location.href === "/loggedin" ? <Navbar /> : <NavbarLoggedin />}
+        {window.location.href === "http://localhost:3000/loggedin" ? <NavbarLoggedin /> : <Navbar />}
       </div>
       <Router>
         <Routes>
